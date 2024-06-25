@@ -150,7 +150,7 @@ function App() {
   return (
     <div className="App">
       <header className="bg-[#243165] min-h-15 items-center justify-center text-white font-bold text-lg">
-        <h1>OFICINA DE TRANFERENCIA DE RESULTADOS DE INVESTIGACIÓN</h1>
+        <h1>OFICINA DE TRANSFERENCIA DE RESULTADOS DE INVESTIGACIÓN</h1>
         <h2>OTRI</h2>
       </header>
   
@@ -181,25 +181,25 @@ function App() {
               )}
 
 
-              <div className="button-group">
+              <div className="">
                 {step > 2 && (
-                  <button type="button" onClick={handleBack} className="back-button">
+                  <button type="button" onClick={handleBack} className="bg-espolBlue2 text-white border-none text-center text-md m-5 px-5 py-2 rounded-xl font-bold">
                     Atrás
                   </button>
                 )}
                 {step < 15 && (
-                  <button type="button" onClick={handleNext} className="next-button">
+                  <button type="button" onClick={handleNext} className="bg-espolBlue2 text-white border-none text-center text-md m-5 px-5 py-2 rounded-xl font-bold">
                     Siguiente
                   </button>
                 )}
                 {step === 15 && (
-                  <button type="submit" className="submit-button">
+                  <button type="submit" className="bg-espolBlue2 text-white border-none text-center text-md m-5 px-5 py-2 rounded-xl font-bold">
                     Guardar y Enviar
                   </button>
                 )}
-                <button type="button" onClick={handleSavePartial} className="save-partial-button">
+               {/**  <button type="button" onClick={handleSavePartial} className="save-partial-button">
                   Guardar Parcial
-                </button>
+                </button>*/}
               </div>
             </form>
             </div>

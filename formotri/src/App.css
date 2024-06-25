@@ -27,7 +27,7 @@
 }
 
 /* Input and textarea styles */
-input[type="text"],
+
 input[type="email"],
 textarea {
   width: 100%; /* Make input and textarea take the full width */

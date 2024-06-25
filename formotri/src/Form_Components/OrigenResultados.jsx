@@ -1,4 +1,4 @@
-import { Input, Button, Select, Textarea } from '@headlessui/react'
+import { Input, Select, Textarea } from '@headlessui/react'
 
 export default function OrigenResultados(props){
     const handleChange = (e) => {
@@ -7,12 +7,10 @@ export default function OrigenResultados(props){
 
     return(
         <>
-        <div className="form-group">
-          <div>
-            <p style={{ color: 'blue' }}>Origen del resultado del proyecto</p>
-          </div>
-          <label htmlFor="projectName">Nombre del Proyecto</label>
+        <div className="flex flex-col">
+          <label htmlFor="projectName" className='text-lg m-2 text-left'>Nombre del Proyecto</label>
           <Input
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 '
             type="text"
             id="projectName"
             name="projectName"
@@ -21,9 +19,10 @@ export default function OrigenResultados(props){
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="projectName">Nombre del director del Proyecto</label>
+        <div className="flex flex-col">
+          <label htmlFor="projectName" className='text-lg m-2 text-left'>Nombre del director del Proyecto</label>
           <Input
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 '
             type="text"
             id="projectDirector"
             name="projectDirector"
@@ -32,10 +31,12 @@ export default function OrigenResultados(props){
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="projectCode">Código del proyecto </label>
-          <span className="small-text">(En caso de no tener, escribir N/A)</span>
+        <div className="flex flex-col">
+          <label htmlFor="projectCode" className='text-lg m-2 text-left'>Código del proyecto 
+            <span className="text-gray-500 text-sm"> (En caso de no tener, escribir N/A)</span>
+          </label>
           <Input
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 '
             type="text"
             id="projectCode"
             name="projectCode"
@@ -44,10 +45,11 @@ export default function OrigenResultados(props){
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="labLog">Cuenta con bitácora de laboratorio?</label>
+        <div className="flex flex-col">
+          <label htmlFor="labLog" className='text-lg m-2 text-left'>Cuenta con bitácora de laboratorio?</label>
           <p></p>
           <Select
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
             id="labLog"
             name="labLog"
             value={props.formData.labLog}
@@ -59,9 +61,10 @@ export default function OrigenResultados(props){
             <option value="No">No</option>
           </Select>
         </div>
-        <div className="form-group">
-          <label htmlFor="projectRelation">Relación del resultado del proyecto:</label>
+        <div className="flex flex-col">
+          <label htmlFor="projectRelation" className='text-lg m-2 text-left'>Relación del resultado del proyecto:</label>
           <Select
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
             id="projectRelation"
             name="projectRelation"
             value={props.formData.projectRelation}
@@ -81,8 +84,8 @@ export default function OrigenResultados(props){
           </Select>
         </div>
         {props.formData.projectRelation.includes('investigacion') && (
-          <div className="form-group">
-            <label htmlFor="researchType">Tipo de investigación:</label>
+          <div className="">
+            <label htmlFor="researchType" className='text-lg m-2 text-left'>Tipo de investigación:</label>
             <p></p>
             <Select
               id="researchType"
@@ -98,7 +101,7 @@ export default function OrigenResultados(props){
             </Select>
           </div>
         )}
-        <div className="form-group">
+        <div className="">
           <label htmlFor="otherRelation">En caso que la relación del resultado del proyecto sea otro, especifique.  </label>
           <span className="small-text">Caso contrario, indique que no aplica (escriba N/A)</span>
           <Input
@@ -111,7 +114,7 @@ export default function OrigenResultados(props){
           />
         </div>
         {props.formData.projectRelation.includes('proyecto_investigacion') && (
-          <div className="form-group">
+          <div className="">
             <label htmlFor="decanatoPlatform">Su proyecto está registrado en la plataforma de decanato de investigación?</label>
             <p></p>
             <Select
@@ -126,7 +129,7 @@ export default function OrigenResultados(props){
               <option value="No">No</option>
             </Select>
             {props.formData.decanatoPlatform === 'Sí' && (
-              <div className="form-group">
+              <div className="">
                 <p></p>
                 <label htmlFor="estado">Estado:</label>
                 <Textarea

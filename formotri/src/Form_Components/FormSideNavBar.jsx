@@ -14,7 +14,7 @@ export default function FormSideNavBar(props){
         <ul class="space-y-2 tracking-wide mt-8">
         <li>
                 <a href="#"
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===2 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}                          
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===2 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}                          
                 onClick={() => setStep(2)}
                           >
                     <span class="-mr-1 font-medium">NOMBRE DEL RESULTADO DEL PROYECTO </span>
@@ -22,7 +22,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#"
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===3 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}                          
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===3 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}                          
                 onClick={() => setStep(3)}
                           >
                     <span class="-mr-1 font-medium">ORIGEN DEL RESULTADO DE PROYECTO </span>
@@ -30,7 +30,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===4 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===4 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(4)}
                 >
                    <span class="">DIFUSIÓN DEL RESULTADO DE PROYECTO </span>
@@ -38,7 +38,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===5 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===5 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(5)}
                 >                    
                     <span class="">RECURSOS DE FONDOS</span>
@@ -46,7 +46,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===6 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===6 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(6)}
                 >   
                     <span class="">RELACIÓN DE AUTORES/INVENTORES Y DECLARACIÓN DE PARTICIPACIONES</span>
@@ -54,7 +54,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===7 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===7 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(7)}
                 >   
                     <span class="">DESCRIPCIÓN DEL RESULTADO DEL PROYECTO</span>
@@ -62,7 +62,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===8 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===8 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(8)}
                 >   
                     <span class="">PROPIEDAD INTELECTUAL</span>
@@ -70,7 +70,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===9 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===9 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(9)}
                 >
                     <span class="">MATERIALES</span>
@@ -78,7 +78,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===10 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===10 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(10)}
                 >                      
                    <span class="">SOFTWARE/CÓDIGO FUENTE</span>
@@ -86,7 +86,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===11 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===11 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(11)}
                 >                      
                    <span class="">INFORMACIÓN DE MERCADO</span>
@@ -94,7 +94,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===12 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===12 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(12)}
                 >                      
                    <span class="">INFORMACIÓN PARA POSIBLE EXPLOTACIÓN DE RESULTADOS DE PROYECTOS </span>
@@ -102,7 +102,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===13 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===13 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(13)}
                 >                      
                    <span class="">DESARROLLO FUTURO EN EL PROYECTO</span>
@@ -110,7 +110,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===14 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===14 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(14)}
                 >                      
                    <span class="">SOLICITUD DE PROTECCIÓN DE PROPIEDAD INTELECTUAL</span>
@@ -118,7 +118,7 @@ export default function FormSideNavBar(props){
             </li>
             <li>
                 <a href="#" 
-                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===15 ? 'rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'rounded-md text-gray-700 '}`}
+                class={`px-4 py-3 flex items-center space-x-4 group ${props.step===15 ? 'rounded-lg text-white bg-[#006EC8]' : 'rounded-md text-gray-700 '}`}
                 onClick={() => setStep(15)}
                 >                      
                    <span class="">DECLARACIÓN EXPRESA</span>
