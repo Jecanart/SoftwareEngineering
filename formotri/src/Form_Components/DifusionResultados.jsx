@@ -1,5 +1,6 @@
 
 import { Input, Radio, RadioGroup, Select, Textarea } from '@headlessui/react'
+import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react';
 
 export default function DifusionResultados(props){
@@ -25,15 +26,18 @@ export default function DifusionResultados(props){
           <div className='flex flex-col'>
           <label htmlFor="diffusion" className='text-lg m-2 text-left'>¿Ha hecho algún tipo de difusión del resultado del proyecto?</label>
 
-          <RadioGroup value={selected} onChange={setSelected} aria-label="Server size">
+          <RadioGroup value={selected} onChange={setSelected} className='flex flex-row gap-x-6 m-2' aria-label="Server size">
             {rbOptions.map((rbOptions) => (
-                <Radio key={rbOptions.name} value={rbOptions} >
-                  <p className="font-semibold text-black">{rbOptions.name}</p>
+                <Radio key={rbOptions.name} value={rbOptions}  >
+                  <div className='flex flex-row gap-x-1'>
+                    <p className="font-semibold text-black">{rbOptions.name}</p>
+                    <CheckCircleIcon className="size-6 fill-tabGray opacity-100 transition group-data-[checked]:opacity-100" />
+                  </div>
                 </Radio>
             ))}
           </RadioGroup>
 
-          <Select
+          {/** <Select
             className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
             id="diffusion"
             name="diffusion"
@@ -44,11 +48,11 @@ export default function DifusionResultados(props){
             <option value="">Seleccione una opción</option>
             <option value="Sí">Sí</option>
             <option value="No">No</option>
-          </Select>
+          </Select>*/}
           </div>
           {props.formData.diffusion === 'Sí' && (
             <>
-              <div className="form-group">
+              <div className="flex flex-col">
                 <p></p>
                 <label htmlFor="diffusionMedium">Medio de difusión:</label>
                 <p></p>
@@ -61,8 +65,8 @@ export default function DifusionResultados(props){
                   required
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="diffusionDate">Fecha de difusión:</label>
+              <div className="flex flex-col">
+                <label htmlFor="diffusionDate" className='text-lg m-2 text-left'>Fecha de difusión:</label>
                 <p></p>
                 <Input
                   type="date"
@@ -73,8 +77,8 @@ export default function DifusionResultados(props){
                   required
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="diffusionContent">Contenido de la difusión:</label>
+              <div className="flex flex-col">
+                <label htmlFor="diffusionContent" className='text-lg m-2 text-left'>Contenido de la difusión:</label>
                 <Textarea
                   id="diffusionContent"
                   name="diffusionContent"
@@ -83,7 +87,7 @@ export default function DifusionResultados(props){
                   required
                 ></Textarea>
               </div>
-              <div className="form-group">
+              <div className="flex flex-col">
                 <label htmlFor="diffusionImages">Adjuntar imágenes o documentos:</label>
                 <Input
                   type="file"
@@ -108,10 +112,20 @@ export default function DifusionResultados(props){
             </>
           )}
         </div>
-        <div className="form-group">
-          <label htmlFor="labLogFuture">¿Alguno de los autores/inventores realizará difusión de este resultado en los próximos 3 meses?</label>
+        <div className="flex flex-col">
+          <label htmlFor="labLogFuture" className='text-lg m-2 text-left'>¿Alguno de los autores/inventores realizará difusión de este resultado en los próximos 3 meses?</label>
           <p></p>
-          <Select
+          <RadioGroup value={selected} onChange={setSelected} className='flex flex-row gap-x-6 m-2' aria-label="Server size">
+            {rbOptions.map((rbOptions) => (
+                <Radio key={rbOptions.name} value={rbOptions}  >
+                  <div className='flex flex-row gap-x-1'>
+                    <p className="font-semibold text-black">{rbOptions.name}</p>
+                    <CheckCircleIcon className="size-6 fill-tabGray opacity-100 transition group-data-[checked]:opacity-100" />
+                  </div>
+                </Radio>
+            ))}
+          </RadioGroup>
+          {/** <Select
             id="labLogFuture"
             name="labLogFuture"
             value={props.formData.labLogFuture}
@@ -121,12 +135,22 @@ export default function DifusionResultados(props){
             <option value="">Seleccione una opción</option>
             <option value="Sí">Sí</option>
             <option value="No">No</option>
-          </Select>
+          </Select>*/}
         </div>
-        <div className="form-group">
-          <label htmlFor="labLogStarted">¿Ha iniciado ya el proceso de difusión?</label>
+        <div className="flex flex-col">
+          <label htmlFor="labLogStarted" className='text-lg m-2 text-left'>¿Ha iniciado ya el proceso de difusión?</label>
           <p></p>
-          <Select
+          <RadioGroup value={selected} onChange={setSelected} className='flex flex-row gap-x-6 m-2' aria-label="Server size">
+            {rbOptions.map((rbOptions) => (
+                <Radio key={rbOptions.name} value={rbOptions}  >
+                  <div className='flex flex-row gap-x-1'>
+                    <p className="font-semibold text-black">{rbOptions.name}</p>
+                    <CheckCircleIcon className="size-6 fill-tabGray opacity-100 transition group-data-[checked]:opacity-100" />
+                  </div>
+                </Radio>
+            ))}
+          </RadioGroup>
+          {/** <Select
             id="labLogStarted"
             name="labLogStarted"
             value={props.formData.labLogStarted}
@@ -136,12 +160,13 @@ export default function DifusionResultados(props){
             <option value="">Seleccione una opción</option>
             <option value="Sí">Sí</option>
             <option value="No">No</option>
-          </Select>
+          </Select>*/}
         </div>
-        <div className="form-group">
+        <div className="flex flex-col">
           <p></p>
-          <label htmlFor="estado">Observaciones</label>
+          <label htmlFor="estado" className='text-lg m-2 text-left'>Observaciones</label>
           <Textarea
+            className='m-1 rounded-lg border-tabGray border-2 w-full resize-none'
             id="estado"
             name="estado"
             value={props.formData.estado}
@@ -150,10 +175,20 @@ export default function DifusionResultados(props){
             placeholder="Ingrese las observaciones"
           ></Textarea>
         </div>
-        <div className="form-group">
-          <label htmlFor="labLog1">¿Tiene conocimiento de que exista algún otro grupo (perteneciente o no a la ESPOL) que esté desarrollando líneas muy próximas a este resultado del proyecto?</label>
+        <div className="flex flex-col">
+          <label htmlFor="labLog1" className='text-lg m-2 text-left'>¿Tiene conocimiento de que exista algún otro grupo (perteneciente o no a la ESPOL) que esté desarrollando líneas muy próximas a este resultado del proyecto?</label>
           <p></p>
-          <Select
+          <RadioGroup value={selected} onChange={setSelected} className='flex flex-row gap-x-6 m-2' aria-label="Server size">
+            {rbOptions.map((rbOptions) => (
+                <Radio key={rbOptions.name} value={rbOptions}  >
+                  <div className='flex flex-row gap-x-1'>
+                    <p className="font-semibold text-black">{rbOptions.name}</p>
+                    <CheckCircleIcon className="size-6 fill-tabGray opacity-100 transition group-data-[checked]:opacity-100" />
+                  </div>
+                </Radio>
+            ))}
+          </RadioGroup>
+          {/** <Select
             id="labLog1"
             name="labLog1"
             value={props.formData.labLog1}
@@ -163,12 +198,13 @@ export default function DifusionResultados(props){
             <option value="id¿¿">Seleccione una opción</option>
             <option value="Sí">Sí</option>
             <option value="No">No</option>
-          </Select>
+          </Select>*/}
         </div>
-        <div className="form-group">
+        <div className="flex flex-col">
           <p></p>
-          <label htmlFor="estado">Observaciones</label>
+          <label htmlFor="estado" className='text-lg m-2 text-left'>Observaciones</label>
           <Textarea
+            className='m-1 rounded-lg border-tabGray border-2 w-full resize-none'
             id="estado"
             name="estado"
             value={props.formData.estado}
