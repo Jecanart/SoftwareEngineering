@@ -39,12 +39,11 @@ textarea {
 }
 
 /* Textarea specific styles */
-textarea {
-  height: 150px; /* Increase height of textarea */
-  resize: vertical; /* Allow vertical resize only */
-}
+
 
 /* Button styles */
+/**
+
 .button-group {
   display: flex;
   flex-direction: column;
@@ -59,12 +58,9 @@ textarea {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-}
+}*/
 
-.nav-button,
-.next-button,
-.back-button,
-.submit-button,
+/**.nav-button,
 .exit-button {
   background-color: #007bff;
   color: white;
@@ -77,7 +73,7 @@ textarea {
   margin: 7.5px 0;
   cursor: pointer;
   border-radius: 4px;
-}
+}*/
 
 .disabled-button {
   background-color: grey;

@@ -84,10 +84,11 @@ export default function OrigenResultados(props){
           </Select>
         </div>
         {props.formData.projectRelation.includes('investigacion') && (
-          <div className="">
+          <div className="flex flex-col">
             <label htmlFor="researchType" className='text-lg m-2 text-left'>Tipo de investigación:</label>
             <p></p>
             <Select
+              className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
               id="researchType"
               name="researchType"
               value={props.formData.researchType}
@@ -101,10 +102,13 @@ export default function OrigenResultados(props){
             </Select>
           </div>
         )}
-        <div className="">
-          <label htmlFor="otherRelation">En caso que la relación del resultado del proyecto sea otro, especifique.  </label>
-          <span className="small-text">Caso contrario, indique que no aplica (escriba N/A)</span>
+        <div className="flex flex-col">
+          <div className='flex flex-col'>
+            <label htmlFor="otherRelation" className='text-lg m-2 mb-0 text-left' >En caso que la relación del resultado del proyecto sea otro, especifique.  </label>
+            <span className="text-gray-500 text-sm text-left ml-2 mb-2">Caso contrario, indique que no aplica (escriba N/A)</span>
+          </div>
           <Input
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 '
             type="text"
             id="otherRelation"
             name="otherRelation"
@@ -114,10 +118,10 @@ export default function OrigenResultados(props){
           />
         </div>
         {props.formData.projectRelation.includes('proyecto_investigacion') && (
-          <div className="">
-            <label htmlFor="decanatoPlatform">Su proyecto está registrado en la plataforma de decanato de investigación?</label>
-            <p></p>
+          <div className="flex flex-col">
+            <label htmlFor="decanatoPlatform" className='text-lg m-2 mb-0 text-left'>Su proyecto está registrado en la plataforma de decanato de investigación?</label>
             <Select
+              className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
               id="decanatoPlatform"
               name="decanatoPlatform"
               value={props.formData.decanatoPlatform}
@@ -130,9 +134,9 @@ export default function OrigenResultados(props){
             </Select>
             {props.formData.decanatoPlatform === 'Sí' && (
               <div className="">
-                <p></p>
-                <label htmlFor="estado">Estado:</label>
+                <label htmlFor="estado" className='text-lg m-2 mb-0 text-left'>Estado:</label>
                 <Textarea
+                  className='m-1 rounded-lg border-tabGray border-2 w-full resize-none'
                   id="estado"
                   name="estado"
                   value={props.formData.estado}

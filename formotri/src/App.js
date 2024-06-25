@@ -165,7 +165,7 @@ function App() {
 
             <form onSubmit={handleSubmit} className="App-form relative right-52">
               {step === 2 && (
-                <NombreResultado formData={formData} handleChange={handleChange} handleExit={handleExit}/>
+                <NombreResultado formData={formData} handleChange={handleChange} />
               )}
               {step === 3 && (
                 <OrigenResultados formData={formData} handleChange={handleChange}/>

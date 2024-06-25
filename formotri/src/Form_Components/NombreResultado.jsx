@@ -5,9 +5,6 @@ export default function NombreResultado(props){
         props.handleChange(e);
         console.log(props.formData.name)
     }
-    const handleExit = () => {
-        props.handleExit();
-    }
 
     return(
         <div className="">
@@ -22,11 +19,6 @@ export default function NombreResultado(props){
               onChange={handleChange}
               required
             />
-          </div>
-          <div className="m-3">
-            <Button type="button" onClick={handleExit} className="exit-button">
-              Salir
-            </Button>
           </div>
       </div>
     );

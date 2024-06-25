@@ -32,7 +32,7 @@ export default function TerminosCondicionesI(props){
                 type="button"
                 onClick={handleNext}
                 disabled={!props.formData.agreementAccepted}
-                className={`next-button ${props.formData.agreementAccepted ? '' : 'disabled-button'}`}
+                className={`bg-espolBlue2 text-white border-none text-center text-md m-5 px-5 py-2 rounded-xl font-bold ${props.formData.agreementAccepted ? '' : 'disabled-button'}`}
               >
                 Empezar Formulario
               </button>

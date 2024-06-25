@@ -1,24 +1,40 @@
 
-import { Input, Select, Textarea } from '@headlessui/react'
+import { Input, Radio, RadioGroup, Select, Textarea } from '@headlessui/react'
+import { useState } from 'react';
 
 export default function DifusionResultados(props){
     const handleChange = (e) => {
         props.handleChange(e);
+        setSelected()
     }
 
     const handleFileChange = (e) => {
         props.handleFileChange(e);
     }
 
+    const rbOptions = [
+      {name: 'Si'},
+      {name: 'No'}
+    ]
+
+    let [selected, setSelected] = useState (rbOptions[0])
+
     return(
         <>
-        <div className="form-group">
-          <div>
-            <p style={{ color: 'blue' }}>Difusión del resultado del proyecto</p>
-          </div>
-          <label htmlFor="diffusion">¿Ha hecho algún tipo de difusión del resultado del proyecto?</label>
-          <p></p>
+        <div className="">
+          <div className='flex flex-col'>
+          <label htmlFor="diffusion" className='text-lg m-2 text-left'>¿Ha hecho algún tipo de difusión del resultado del proyecto?</label>
+
+          <RadioGroup value={selected} onChange={setSelected} aria-label="Server size">
+            {rbOptions.map((rbOptions) => (
+                <Radio key={rbOptions.name} value={rbOptions} >
+                  <p className="font-semibold text-black">{rbOptions.name}</p>
+                </Radio>
+            ))}
+          </RadioGroup>
+
           <Select
+            className='m-1 rounded-lg border-espolBlue border-2 w-full size-10 bg-white'
             id="diffusion"
             name="diffusion"
             value={props.formData.diffusion}
@@ -29,6 +45,7 @@ export default function DifusionResultados(props){
             <option value="Sí">Sí</option>
             <option value="No">No</option>
           </Select>
+          </div>
           {props.formData.diffusion === 'Sí' && (
             <>
               <div className="form-group">
